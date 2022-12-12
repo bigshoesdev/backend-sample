@@ -1,0 +1,43 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Backend APIs for Wreno",
+  "main": "./src/index.ts",
+  "engines": {
+    "node": "16"
+  },
+  "private": true,
+  "repository": "git@github.com:wreno-private/api.git",
+  "scripts": {
+    "start": "ts-node-dev --respawn --rs -r dotenv/config -r tsconfig-paths/register --transpile-only ./src/index.ts",
+    "lint": "eslint . && tsc --noemit",
+    "lint:fix": "eslint . --fix && tsc --noemit",
+    "build": "tsc && tsc-alias"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/nodemailer": "^6.4.6",
+    "@types/pubnub": "^7.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "pubnub": "^7.2.1"
+  }
+}

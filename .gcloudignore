@@ -1,0 +1,9 @@
+firebase/**
+.github/**
+.husky/**
+cache/**
+**/*.md
+src/tests/**
+tests/**
+migrations
+#!include:.gitignore
